@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<nav>
+  <ul class="text-white">
+    <a href="/">01. Home</a>
+    <a href="/projects">02. Projects</a>
+    <a href="/about">03. About</a>
+    <a href="/contact">04. Contact</a>
+  </ul>
+</nav>
+<style></style>
