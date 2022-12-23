@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Unbounded", ...defaultTheme.fontFamily.sans],
+        sans: ['"Jetbrains Mono"', ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         menu: {
@@ -19,8 +19,8 @@ module.exports = {
         },
       },
       animation: {
-        open: "menu 0.3s ease-in-out forwards",
-        "open-reverse": "menu-reverse 0.3s ease-in-out forwards",
+        open: "menu 0.5s ease-out forwards",
+        "open-reverse": "menu-reverse 0.5s ease-out forwards",
       },
     },
   },
