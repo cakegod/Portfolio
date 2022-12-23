@@ -11,16 +11,18 @@ module.exports = {
       keyframes: {
         menu: {
           "0%": { transform: "scaleX(0)" },
+          "50%": { transform: "scaleX(1.2)" },
           "100%": { transform: "scaleX(1)" },
         },
         "menu-reverse": {
           "0%": { transform: "scaleX(1)" },
+          "50%": { transform: "scaleX(1.2)" },
           "100%": { transform: "scaleX(0)" },
         },
       },
       animation: {
-        open: "menu 0.5s ease-out forwards",
-        "open-reverse": "menu-reverse 0.5s ease-out forwards",
+        open: "menu 0.5s ease forwards",
+        "open-reverse": "menu-reverse 0.5s ease forwards",
       },
     },
   },
