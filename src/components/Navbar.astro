@@ -8,12 +8,34 @@
 // const { href, title, body } = Astro.props;
 ---
 
-<nav>
-  <ul class="text-white">
-    <a href="/">01. Home</a>
-    <a href="/projects">02. Projects</a>
-    <a href="/about">03. About</a>
-    <a href="/contact">04. Contact</a>
-  </ul>
+<nav class="text-2xl flex justify-between items-center h-24 font-extrabold">
+  <a href="/">FR</a>
+
+  <div class="flex flex-col items-end">
+    <div class="space-y-2 z-10" id="hamburger">
+      <span class="block w-5 h-0.5 bg-neutral-50"></span>
+      <span class="block w-8 h-0.5 bg-neutral-50"></span>
+      <span class="block w-8 h-0.5 bg-neutral-50"></span>
+    </div>
+    <div
+      class="flex flex-col gap-10 w-full items-center pt-28 origin-right scale-0 backdrop-blur-lg fixed right-0 top-0 h-full"
+      id="menu"
+    >
+      <a href="/">01. Home</a>
+      <a href="/projects">02. Projects</a>
+      <a href="/about">03. About</a>
+      <a href="/contact">04. Contact</a>
+    </div>
+  </div>
 </nav>
-<style></style>
+
+<script>
+  const hamburger = document.getElementById("hamburger") as HTMLDivElement;
+  const menu = document.getElementById("menu") as HTMLDivElement;
+
+  hamburger.addEventListener("click", () => {
+    !menu.classList.contains("animate-open")
+      ? menu.classList.toggle("animate-open")
+      : menu.classList.toggle("animate-open-reverse");
+  });
+</script>
