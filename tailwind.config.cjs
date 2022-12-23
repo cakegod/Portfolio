@@ -21,8 +21,8 @@ module.exports = {
         },
       },
       animation: {
-        open: "menu 0.5s ease forwards",
-        "open-reverse": "menu-reverse 0.5s ease forwards",
+        open: "menu 0.4s ease forwards",
+        "open-reverse": "menu-reverse 0.4s ease forwards",
       },
     },
   },
