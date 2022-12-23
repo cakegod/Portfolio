@@ -1,19 +1,21 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Navbar />
-  <main class="font-bold">
-    <p class="text-7xl">FÁBIO</p>
-    <p class="text-5xl">RODRIGUES</p>
-    <p class="text-xl py-4 font">Self-taught web developper</p>
-    <p class="text-xl pb-1">Hi!</p>
-    <p class="font-medium">
-      Welcome to my personal website, where I showcase my web development
-      abilities. On this site, you will find a selection of my most notable web
-      development projects.
+  <main class="font-bold max-w-4xl m-auto md:py-12">
+    <p class="text-6xl md:text-9xl">FÁBIO</p>
+    <p class="text-5xl md:text-7xl tracking-wide">RODRIGUES.</p>
+    <p class="text-xl py-4 font md:text-3xl tracking-widest text-indigo-300">
+      SELF-TAUGHT WEB DEVELOPPER.
     </p>
+    <div class="pb-1 font-normal">
+      <p class="text-xl md:text-2xl text-indigo-200">HI!</p>
+      <p class="md:text-lg tracking-wide text-indigo-50">
+        Welcome to my personal website, where I showcase my web development
+        abilities. On this site, you will find a selection of my most notable
+        web development projects.
+      </p>
+    </div>
   </main>
 </Layout>
