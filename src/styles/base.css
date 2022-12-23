@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .nav-link {
+    @apply underline underline-offset-4 decoration-indigo-500 decoration-4;
+  }
+}
