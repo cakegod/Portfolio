@@ -2,7 +2,8 @@
 export interface Props {
   title?: string;
 }
-import "@fontsource/jetbrains-mono";
+
+import "@fontsource/inter/variable-full.css";
 import Navbar from "../components/Navbar.astro";
 const { title } = Astro.props;
 import "../styles/base.css";
@@ -17,7 +18,7 @@ import "../styles/base.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title ? `Fábio | ${title}` : "Fábio"}</title>
   </head>
-  <body class="h-full bg-[#0C0D0D] px-6 text-neutral-50 md:px-12">
+  <body class="h-full bg-[#0C0D0D] px-6 text-neutral-100 md:px-12">
     <Navbar />
     <slot />
   </body>

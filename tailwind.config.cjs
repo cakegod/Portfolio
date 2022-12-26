@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Jetbrains Mono"', ...defaultTheme.fontFamily.sans],
+        sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         menu: {
