@@ -19,10 +19,21 @@ module.exports = {
           "50%": { transform: "scaleX(1.2)" },
           "100%": { transform: "scaleX(0)" },
         },
+        text: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
       },
       animation: {
         open: "menu 0.4s ease forwards",
         "open-reverse": "menu-reverse 0.4s ease forwards",
+        text: "text 5s ease infinite",
       },
     },
   },
