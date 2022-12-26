@@ -1,7 +1,14 @@
 ---
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Projects" >
-  <h1 class="text-4xl uppercase">What I've built</h1>
+<Layout title="Projects">
+  <main class="m-auto max-w-5xl">
+    <h1 class="text-3xl font-black uppercase">Things I have built</h1>
+    <Card
+      title="Shopping Cart"
+      details="A front end project made with React and Next JS."
+    />
+  </main>
 </Layout>

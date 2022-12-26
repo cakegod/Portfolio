@@ -4,6 +4,11 @@
 
 @layer utilities {
   .nav-link {
-    @apply underline underline-offset-4 decoration-blue-500 decoration-4 text-neutral-200;
+    @apply text-neutral-200 underline decoration-blue-500 decoration-4 underline-offset-4;
+  }
+
+  .button-glow {
+    box-shadow: 0 0 70px #3b82f67a, 0 0 35px #06b6d473, 0 0 5px #6366f1,
+      0 0 2px rgb(255 255 255), 0 0 1px #6366f1;
   }
 }
