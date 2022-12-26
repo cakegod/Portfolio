@@ -4,6 +4,6 @@
 
 @layer utilities {
   .nav-link {
-    @apply underline underline-offset-4 decoration-indigo-500 decoration-4;
+    @apply underline underline-offset-4 decoration-blue-500 decoration-4;
   }
 }
