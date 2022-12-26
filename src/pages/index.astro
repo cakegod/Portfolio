@@ -3,21 +3,33 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <main class="m-auto max-w-5xl font-bold">
+  <main class="m-auto max-w-5xl font-black">
     <p class="text-[6rem] leading-none md:text-9xl xl:text-[9rem]">FÁBIO</p>
-    <p class="text-[3rem] tracking-wide md:text-7xl xl:text-[7rem]">
-      RODRIGUES
-    </p>
+    <p class="text-[3rem] leading-none md:text-7xl xl:text-[7rem]">RODRIGUES</p>
     <p
-      class="font animate-text bg-gradient-to-r from-cyan-500 via-indigo-400 to-blue-500 bg-clip-text pb-8 pt-2 text-4xl tracking-wide text-transparent md:text-5xl"
+      class="animate-text bg-gradient-to-r from-cyan-500 via-indigo-400 to-blue-500 bg-clip-text pb-6 pt-2 text-4xl tracking-wide text-transparent md:text-5xl"
     >
       SELF-TAUGHT WEB DEVELOPPER
     </p>
 
-    <p class="text-xl font-medium tracking-wide text-neutral-200">
-      Welcome to my personal website, where I showcase my web development
-      abilities. <br />On this site, you will find a selection of my most
-      notable web development projects.
+    <p class="text-2xl font-medium leading-relaxed text-neutral-200">
+      Welcome to my personal website!
     </p>
+    <p class="text-xl font-normal text-neutral-300">
+      On this site, you will find a selection of my most notable web development
+      projects, information about myself and how to contact me.
+    </p>
+
+    <div
+      class="item-center m-auto my-10 flex h-14 w-40 animate-text justify-center rounded-sm bg-gradient-to-r from-cyan-500 via-indigo-400 to-blue-500 p-[1px]"
+    >
+      <button class="h-full w-full bg-black transition-colors duration-200 hover:bg-inherit">
+        <a
+          href="/projects"
+          class="flex h-full w-full flex-col items-center justify-center font-bold text-neutral-300 hover:text-black"
+          >Let me see!</a
+        >
+      </button>
+    </div>
   </main>
 </Layout>
