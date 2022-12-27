@@ -1,0 +1,51 @@
+---
+import Hamburger from "./Hamburger.astro";
+import Links from "./Links.astro";
+import Logo from "./Logo.astro";
+---
+
+<nav
+  class="mb-12 flex h-20 items-center justify-between text-2xl font-semibold md:h-28"
+>
+  <Logo />
+  <div class="flex flex-col items-end">
+    <Hamburger />
+    <Links />
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById("hamburger") as HTMLDivElement;
+  const menu = document.getElementById("menu") as HTMLDivElement;
+  const home = document.getElementById("home") as HTMLLinkElement;
+  const projects = document.getElementById("projects") as HTMLLinkElement;
+  const about = document.getElementById("about") as HTMLLinkElement;
+  const contact = document.getElementById("contact") as HTMLLinkElement;
+
+  function linkToggle() {
+    const path = window.location.pathname;
+    console.log(path);
+    switch (path) {
+      case "/":
+        home.classList.add("nav-link");
+        break;
+      case "/projects":
+        projects.classList.add("nav-link");
+        break;
+      case "/about":
+        about.classList.add("nav-link");
+        break;
+      case "/contact":
+        contact.classList.add("nav-link");
+        break;
+    }
+  }
+
+  linkToggle();
+
+  hamburger.addEventListener("click", () => {
+    !menu.classList.contains("animate-open")
+      ? menu.classList.toggle("animate-open")
+      : menu.classList.toggle("animate-open-reverse");
+  });
+</script>

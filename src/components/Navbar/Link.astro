@@ -1,0 +1,18 @@
+---
+interface Props {
+  link: {
+    name: string;
+    id: string;
+    path: string;
+  };
+}
+
+const { link } = Astro.props;
+const { name, id, path } = link;
+---
+
+<a
+  href={path}
+  id={id}
+  class="text-neutral-400 transition-colors hover:text-neutral-200">{name}</a
+>
