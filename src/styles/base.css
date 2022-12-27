@@ -8,7 +8,6 @@
   }
 
   .button-glow {
-    box-shadow: 0 0 70px #3b82f67a, 0 0 35px #06b6d473, 0 0 5px #6366f1,
-      0 0 2px rgb(255 255 255), 0 0 1px #6366f1;
+    box-shadow: 0 0 50px #3b83f65b, 0 0 35px #06b5d444, 0 0 5px #6365f19f;
   }
 }
