@@ -10,4 +10,27 @@
   .button-glow {
     box-shadow: 0 0 50px #3b83f65b, 0 0 35px #06b5d444, 0 0 5px #6365f19f;
   }
+
+  .body-glow {
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      #247fe7 0deg,
+      #367caa 180deg,
+      #6a0bb8 1turn
+    );
+    mix-blend-mode: normal;
+    filter: blur(120px);
+    border-radius: 500px;
+    height: 80%;
+    width: 75%;
+    margin: auto;
+    display: block;
+    opacity: 0.10;
+    z-index: -100;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+  }
 }
