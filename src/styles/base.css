@@ -34,3 +34,7 @@
     position: absolute;
   }
 }
+
+::selection {
+  @apply text-neutral-900 bg-blue-500
+}
