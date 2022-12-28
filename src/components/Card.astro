@@ -3,13 +3,19 @@ interface Props {
   title: string;
   details: string;
   image: string;
+  link:string;
 }
 
-const { title, image, details } = Astro.props;
+const { title, image, details, link } = Astro.props;
 ---
 
-<div class="border">
-  <h2>{title}</h2>
-  <img src={image} alt="" />
-  <p>{details}</p>
-</div>
+<a
+  href={link}
+  class="rounded-md border border-neutral-700 p-4 transition-colors duration-300 hover:border-neutral-600"
+>
+  <img src={image} alt={title} class="rounded-md" />
+  <div class="pt-2">
+    <h2 class="font-semibold text-neutral-200 md:text-lg">{title}</h2>
+    <p class="text-neutral-400 md:text-lg">{details}</p>
+  </div>
+</a>

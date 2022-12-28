@@ -1,14 +1,26 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+import shopping from "/shopping.png";
+import memory from "/memory.png";
 ---
 
 <Layout title="Projects">
   <main class="m-auto max-w-5xl">
-    <h1 class="text-3xl font-black uppercase">Things I have built</h1>
-    <Card
-      title="Shopping Cart"
-      details="A front end project made with React and Next JS."
-    />
+    <h1 class="pb-4 text-3xl font-black uppercase">Things I have built</h1>
+    <div class="grid gap-4 md:grid-cols-2">
+      <Card
+        title="Shopping Cart"
+        details="A shopping cart front end project made with React and Next JS."
+        image={shopping}
+        link="https://shopping-cart-cakegod.vercel.app/shop"
+      />
+      <Card
+        title="Memory Game"
+        details="A memory game front end project made with React."
+        image={memory}
+        link="https://shopping-cart-cakegod.vercel.app/shop"
+      />
+    </div>
   </main>
 </Layout>
