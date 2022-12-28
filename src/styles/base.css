@@ -36,5 +36,34 @@
 }
 
 ::selection {
-  @apply text-neutral-900 bg-blue-500
+  @apply bg-blue-500 text-neutral-900;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(92, 92, 92);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(41, 41, 41);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(92, 92, 92);
 }
