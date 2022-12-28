@@ -1,12 +1,15 @@
 ---
 interface Props {
-  title: string;
-  details: string;
-  image: string;
-  link: string;
+  projectData: {
+    title: string;
+    details: string;
+    image: string;
+    link: string;
+  };
 }
 
-const { title, image, details, link } = Astro.props;
+const { projectData } = Astro.props;
+const { title, image, details, link } = projectData;
 ---
 
 <a

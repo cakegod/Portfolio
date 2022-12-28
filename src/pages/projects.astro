@@ -3,24 +3,30 @@ import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import shopping from "/shopping.webp";
 import memory from "/memory.webp";
+
+const projects = [
+  {
+    title: "Shopping Cart",
+    details: "A shopping cart front end project made with React and Next JS.",
+    image: shopping,
+    link: "https://shopping-cart-cakegod.vercel.app/shop",
+  },
+  {
+    title: "Memory Game",
+    details: "A memory game front end project made with React.",
+    image: memory,
+    link: "https://memory-card-game-umber.vercel.app/",
+  },
+];
 ---
 
 <Layout title="Projects">
   <main class="m-auto flex max-w-6xl flex-col items-center">
-    <h1 class="pb-6 text-2xl sm:text-5xl md:text-5xl font-black uppercase">Things I have built</h1>
+    <h1 class="pb-6 text-2xl font-black uppercase sm:text-5xl md:text-5xl">
+      Things I have built
+    </h1>
     <div class="grid gap-4 lg:grid-cols-2">
-      <Card
-        title="Shopping Cart"
-        details="A shopping cart front end project made with React and Next JS."
-        image={shopping}
-        link="https://shopping-cart-cakegod.vercel.app/shop"
-      />
-      <Card
-        title="Memory Game"
-        details="A memory game front end project made with React."
-        image={memory}
-        link="https://shopping-cart-cakegod.vercel.app/shop"
-      />
+      {projects.map((project) => <Card projectData={project} />)}
     </div>
   </main>
 </Layout>
