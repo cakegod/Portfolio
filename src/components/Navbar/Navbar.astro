@@ -23,9 +23,7 @@ import Logo from "./Logo.astro";
   const contact = document.getElementById("contact") as HTMLLinkElement;
 
   function linkToggle() {
-    const path = window.location.pathname;
-    console.log(path);
-    switch (path) {
+    switch (window.location.pathname) {
       case "/":
         home.classList.add("nav-link");
         break;
