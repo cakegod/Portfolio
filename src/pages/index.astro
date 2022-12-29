@@ -1,4 +1,5 @@
 ---
+import HomeButton from "../components/Home/HomeButton.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -22,18 +23,6 @@ import Layout from "../layouts/Layout.astro";
       development projects, information about myself, and details on how to
       contact me.
     </p>
-    <div
-      class="item-center group relative m-auto my-10 flex h-14 w-40 justify-center rounded-md bg-gradient-to-l from-indigo-500 to-blue-500 p-[1px] text-neutral-200"
-    >
-      <button
-        class="z-10 h-full w-full rounded-md bg-black duration-200 hover:bg-inherit"
-      >
-        <a href="/projects">Let me see!</a>
-      </button>
-      <div
-        class="absolute h-full w-full rounded-md bg-gradient-to-r from-indigo-500 to-blue-500 transition-all duration-500 group-hover:opacity-70 group-hover:blur-xl"
-      >
-      </div>
-    </div>
+    <HomeButton />
   </main>
 </Layout>
