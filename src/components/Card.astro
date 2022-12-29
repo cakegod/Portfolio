@@ -14,12 +14,13 @@ const { title, image, details, link } = projectData;
 
 <a
   href={link}
-  class="relative rounded-md border border-neutral-700 bg-neutral-900 p-4 transition-colors duration-300 hover:border-neutral-600"
+  class="relative rounded-md border border-neutral-700 bg-black p-6 leading-relaxed transition-colors duration-300 hover:border-neutral-600"
 >
-  <img src={image} alt={title} class="w-full rounded-md lg:h-72" />
+  <img src={image} alt={title} class="w-full rounded-sm pb-2 lg:h-72" />
   <div class="pt-2">
-    <h2 class="font-semibold text-neutral-200 md:text-lg">{title}</h2>
-    <p class="text-neutral-400 md:text-lg">{details}</p>
+    <h2 class="text-lg font-semibold text-neutral-200">{title}</h2>
+    <p class="text-neutral-400">{details}</p>
+    <slot />
   </div>
   <div
     class="absolute left-0 top-0 -z-10 h-full w-full rounded-3xl bg-gradient-to-r from-blue-600 to-sky-600 opacity-20 blur-3xl transition-all duration-500"
