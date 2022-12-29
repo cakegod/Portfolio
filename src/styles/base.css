@@ -16,16 +16,16 @@
       from 180deg at 50% 50%,
       #247fe7 0deg,
       #367caa 180deg,
-      #6a0bb8 1turn
+      #3e24d4 1turn
     );
     mix-blend-mode: normal;
-    filter: blur(120px);
-    border-radius: 500px;
+    filter: blur(150px);
+    border-radius: 300px;
     height: 80%;
-    width: 75%;
+    width: 90%;
     margin: auto;
     display: block;
-    opacity: 0.1;
+    opacity: 0.12;
     z-index: -100;
     right: 0;
     left: 0;
