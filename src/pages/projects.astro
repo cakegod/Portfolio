@@ -7,9 +7,13 @@ import memory from "/memory.webp";
 const projects = [
   {
     title: "Shopping Cart",
-    details: "A shopping cart front end project made with React and Next JS.",
+    details: "A front end project made with React and Next JS.",
     image: shopping,
     link: "https://shopping-cart-cakegod.vercel.app/shop",
+    list: [
+      "Utilized <strong>Next.js</strong> for routing and optimization of images and fonts.",
+      "Implemented <strong>Zustand</strong> for state management.",
+    ],
   },
   {
     title: "Memory Game",
@@ -38,7 +42,17 @@ const projects = [
       Things I have built
     </h1>
     <div class="grid gap-4 lg:grid-cols-2">
-      {projects.map((project) => <Card projectData={project} />)}
+      {
+        projects.map((project) => (
+          <Card projectData={project}>
+            <ul class="ml-4 list-disc pt-1 text-neutral-400">
+              {project.list?.map((item) => (
+                <li set:html={item} />
+              ))}
+            </ul>
+          </Card>
+        ))
+      }
     </div>
   </main>
 </Layout>
