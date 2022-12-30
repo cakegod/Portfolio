@@ -1,41 +1,40 @@
 ---
-import { cva } from "class-variance-authority";
-import type { VariantProps } from "class-variance-authority";
+import type { TagNameProps } from "@customTypes/projects";
+import { projectTags } from "@data/projects";
 
-type TagProps = Required<VariantProps<typeof tagVariants>>;
+const classBase =
+  "flex w-[4.25rem] sm:w-20 items-center justify-center rounded py-2 sm:text-sm text-xs font-medium";
 
-interface Props {
-  color: TagProps["color"];
-  children: string;
+const classColors = {
+  sky: "bg-sky-900 text-sky-100",
+  cyan: "bg-cyan-900 text-cyan-100",
+  green: "bg-green-900 text-green-100",
+  red: "bg-red-900 text-red-100",
+  indigo: "bg-indigo-900 text-indigo-100",
+  orange: "bg-orange-900 text-orange-100",
+  rose: "bg-rose-900 text-rose-100",
+};
+
+export type TagColorsProps = keyof typeof classColors;
+
+const findColorName = (tagName: TagNameProps) =>
+  projectTags.find((tag) => tag[0] === tagName)![1];
+
+function composeClass(color: TagColorsProps) {
+  console.log(color);
+
+  return `${classBase} ${classColors[color]}`;
 }
 
-const tagVariants = cva(
-  "flex w-[4.25rem] sm:w-20 items-center justify-center rounded py-2 sm:text-sm text-xs font-medium",
-  {
-    variants: {
-      color: {
-        blue: "bg-blue-900 text-blue-100",
-        emerald: "bg-emerald-900 text-emerald-100",
-        green: "bg-green-900 text-green-100",
-        red: "bg-red-900 text-red-100",
-        indigo: "bg-indigo-900 text-indigo-100",
-        orange: "bg-orange-900 text-orange-100",
-        rose: "bg-rose-900 text-rose-100",
-      },
-    },
-    defaultVariants: {
-      color: "blue",
-    },
-  }
-);
+interface Props {
+  tagName: TagNameProps;
+}
 
-const { color } = Astro.props;
-
-export type { Props as TagProps };
+const { tagName } = Astro.props;
 ---
 
-<div class={tagVariants({ color })}>
-  <slot />
+<div class={composeClass(findColorName(tagName))}>
+  {tagName}
 </div>
 
 <script></script>

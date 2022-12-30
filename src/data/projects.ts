@@ -1,9 +1,18 @@
 import shopping from "/shopping.webp";
 import memory from "/memory.webp";
 import blog from "/blog.webp";
-import type { ProjectProps } from "@customTypes/projects";
+import type { ProjectProps, TagsTuple } from "@customTypes/projects";
 
-const projectsData: ProjectProps[] = [
+export const projectTags: TagsTuple[] = [
+  ["Tailwind", "cyan"],
+  ["Zustand", "red"],
+  ["React", "sky"],
+  ["Next JS", "orange"],
+  ["MongoDB", "green"],
+  ["Express", "indigo"],
+];
+
+export const projectsData: ProjectProps[] = [
   {
     title: "Blog API",
     details:
@@ -14,12 +23,7 @@ const projectsData: ProjectProps[] = [
       "Created a <strong>REST API</strong> as the back-end with Express JS.",
       "Implemented <strong>MongoDB</strong> as the database.",
     ],
-    tags: [ 
-      { name: "Tailwind", color: "emerald" },
-      { name: "Zustand", color: "red" },
-      { name: "MongoDB", color: "green" },
-      { name: "Express", color: "indigo" },
-    ],
+    tags: ["Tailwind", "Zustand", "MongoDB", "Express"],
   },
   {
     title: "Shopping Cart",
@@ -31,11 +35,7 @@ const projectsData: ProjectProps[] = [
       "Utilized <strong>Next.js</strong> for routing and optimization of images and fonts.",
       "Implemented <strong>React context</strong> to avoid prop drilling.",
     ],
-    tags: [
-      { name: "Tailwind", color: "emerald" },
-      { name: "React", color: "blue" },
-      { name: "Next JS", color: "orange" },
-    ],
+    tags: ["Tailwind", "React", "Next JS"],
   },
   {
     title: "Memory Game",
@@ -46,12 +46,6 @@ const projectsData: ProjectProps[] = [
       "Learned how to use <strong>React hooks</strong> and <strong>lifecycle</strong> methods.",
       "Implemented <strong>Zustand</strong> for state management.",
     ],
-    tags: [
-      { name: "Tailwind", color: "emerald" },
-      { name: "React", color: "blue" },
-      { name: "Zustand", color: "red" },
-    ],
+    tags: ["Tailwind", "React", "Zustand"],
   },
 ];
-
-export { projectsData };

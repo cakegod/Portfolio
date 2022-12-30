@@ -1,15 +1,20 @@
-import type { TagProps } from "@components/projects/Tag.astro";
+import type { TagColorsProps } from "@components/projects/Tag.astro";
 
-interface ProjectProps {
+export type TagNameProps =
+  | "Tailwind"
+  | "Zustand"
+  | "React"
+  | "Next JS"
+  | "MongoDB"
+  | "Express";
+
+export type TagsTuple = [TagNameProps, TagColorsProps];
+
+export interface ProjectProps {
   title: string;
   details: string;
   image: string;
   link: string;
-  list?: string[];
-  tags?: {
-    name: string;
-    color: TagProps["color"];
-  }[];
+  list: string[];
+  tags: TagNameProps[];
 }
-
-export type { ProjectProps };
