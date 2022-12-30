@@ -14,10 +14,11 @@ const projectsData: ProjectProps[] = [
       "Created a <strong>REST API</strong> as the back-end with Express JS.",
       "Implemented <strong>MongoDB</strong> as the database.",
     ],
-    tags: [
+    tags: [ 
       { name: "Tailwind", color: "emerald" },
-      { name: "React", color: "blue" },
       { name: "Zustand", color: "red" },
+      { name: "MongoDB", color: "green" },
+      { name: "Express", color: "indigo" },
     ],
   },
   {
