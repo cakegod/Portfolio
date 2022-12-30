@@ -1,11 +1,12 @@
 ---
+import "@fontsource/inter/variable-full.css";
+import Navbar from "@components/navbar/Navbar.astro";
+import "@styles/base.css";
+
 export interface Props {
   title?: string;
 }
 
-import "@fontsource/inter/variable-full.css";
-import Navbar from "../components/Navbar/Navbar.astro";
-import "../styles/base.css";
 const { title } = Astro.props;
 ---
 

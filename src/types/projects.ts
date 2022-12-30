@@ -1,4 +1,4 @@
-import type { TagProps } from "./components/Projects/Tag.astro";
+import type { TagProps } from "@components/projects/Tag.astro";
 
 interface ProjectProps {
   title: string;

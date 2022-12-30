@@ -1,6 +1,6 @@
 import shopping from "/shopping.webp";
 import memory from "/memory.webp";
-import type { ProjectProps } from "./types";
+import type { ProjectProps } from "@customTypes/projects";
 
 const projectsData: ProjectProps[] = [
   {
