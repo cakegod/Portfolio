@@ -3,16 +3,14 @@ import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";
 
 type TagProps = Required<VariantProps<typeof tagVariants>>;
-  
+
 interface Props {
   color: TagProps["color"];
   children: string;
 }
 
-export type { Props as TagProps };
-
 const tagVariants = cva(
-  "flex w-20 items-center justify-center rounded py-2 text-sm font-medium ",
+  "flex w-20 items-center justify-center rounded py-2 text-sm font-medium",
   {
     variants: {
       color: {
@@ -21,6 +19,7 @@ const tagVariants = cva(
         red: "bg-red-900 text-red-100",
         indigo: "bg-indigo-900 text-indigo-100",
         orange: "bg-orange-900 text-orange-100",
+        rose: "bg-rose-900 text-rose-100",
       },
     },
     defaultVariants: {
@@ -30,6 +29,8 @@ const tagVariants = cva(
 );
 
 const { color } = Astro.props;
+
+export type { Props as TagProps };
 ---
 
 <div class={tagVariants({ color })}>
