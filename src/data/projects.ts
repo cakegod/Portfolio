@@ -1,16 +1,7 @@
 import shopping from "/shopping.webp";
 import memory from "/memory.webp";
 import blog from "/blog.webp";
-import type { ProjectProps, TagsTuple } from "@customTypes/projects";
-
-export const projectTags: TagsTuple[] = [
-  ["Tailwind", "cyan"],
-  ["Zustand", "red"],
-  ["React", "sky"],
-  ["Next JS", "orange"],
-  ["MongoDB", "green"],
-  ["Express", "indigo"],
-];
+import type { ProjectProps } from "@customTypes/projects";
 
 export const projectsData: ProjectProps[] = [
   {
