@@ -41,6 +41,7 @@
 
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 * {
@@ -80,6 +81,45 @@ body {
   }
 }
 
+@keyframes move-up {
+  0% {
+    transform: translateY(150%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 main {
   animation: fade-in ease-out 0.7s;
+}
+
+#project-container > h1 {
+  animation: text-down ease-out 0.7s 1.3s both;
+}
+
+#project-container {
+  animation: move-up ease 1.3s;
+}
+
+@media (prefers-reduced-motion) {
+  #project-container {
+    animation: fade-in ease-out 0.7s;
+  }
+  #project-container > h1 {
+    animation: none;
+  }
 }
