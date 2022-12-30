@@ -3,8 +3,9 @@ import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import shopping from "/shopping.webp";
 import memory from "/memory.webp";
+import type { ProjectProps } from "../types";
 
-const projects = [
+const projects: ProjectProps[] = [
   {
     title: "Shopping Cart",
     details: "A front end project made with React and Next JS.",
@@ -13,6 +14,10 @@ const projects = [
     list: [
       "Utilized <strong>Next.js</strong> for routing and optimization of images and fonts.",
       "Implemented <strong>Zustand</strong> for state management.",
+    ],
+    tags: [
+      { name: "Tailwind", color: "emerald" },
+      { name: "Next JS", color: "indigo" },
     ],
   },
   {
@@ -45,7 +50,7 @@ const projects = [
       {
         projects.map((project) => (
           <Card projectData={project}>
-            <ul class="ml-4 list-disc pt-1 text-neutral-400">
+            <ul class="ml-4 list-disc pt-1 pb-4 text-neutral-400">
               {project.list?.map((item) => (
                 <li set:html={item} />
               ))}

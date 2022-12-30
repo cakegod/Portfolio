@@ -1,27 +1,28 @@
 ---
+import type { ProjectProps } from "../types";
+import Tag from "./Projects/Tag.astro";
+
 interface Props {
-  projectData: {
-    title: string;
-    details: string;
-    image: string;
-    link: string;
-    list?: string[];
-  };
+  projectData: ProjectProps;
 }
 
 const { projectData } = Astro.props;
-const { title, image, details, link } = projectData;
+const { title, image, details, link, tags } = projectData;
 ---
 
 <a
   href={link}
-  class="relative rounded-md border border-neutral-700 bg-black p-6 leading-relaxed transition-colors duration-300 hover:border-neutral-600"
->
-  <img src={image} alt={title} class="w-full rounded-sm pb-2 lg:h-72" />
-  <div class="pt-2">
-    <h2 class="text-lg font-semibold text-neutral-200">{title}</h2>
-    <p class="text-neutral-400">{details}</p>
-    <slot />
+  class="relative flex flex-col justify-between rounded-md border border-neutral-700 bg-black p-6 leading-relaxed transition-colors duration-300 hover:border-neutral-600"
+  ><div>
+    <img src={image} alt={title} class="w-full rounded-sm pb-2 lg:h-72" />
+    <div class="pt-2">
+      <h2 class="text-lg font-semibold text-neutral-200">{title}</h2>
+      <p class="text-neutral-400">{details}</p>
+      <slot />
+    </div>
+  </div>
+  <div class="flex gap-2">
+    {tags?.map((tag) => <Tag color={tag.color}>{tag.name}</Tag>)}
   </div>
   <div
     class="absolute left-0 top-0 -z-10 h-full w-full rounded-3xl bg-gradient-to-r from-blue-600 to-sky-600 opacity-20 blur-3xl transition-all duration-500"
