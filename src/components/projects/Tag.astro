@@ -10,12 +10,13 @@ interface Props {
 }
 
 const tagVariants = cva(
-  "flex w-20 items-center justify-center rounded py-2 text-sm font-medium",
+  "flex w-[4.25rem] sm:w-20 items-center justify-center rounded py-2 sm:text-sm text-xs font-medium",
   {
     variants: {
       color: {
         blue: "bg-blue-900 text-blue-100",
         emerald: "bg-emerald-900 text-emerald-100",
+        green: "bg-green-900 text-green-100",
         red: "bg-red-900 text-red-100",
         indigo: "bg-indigo-900 text-indigo-100",
         orange: "bg-orange-900 text-orange-100",
