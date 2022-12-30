@@ -108,11 +108,11 @@ main {
 }
 
 #project-container > h1 {
-  animation: text-down ease-out 0.7s 1.3s both;
+  animation: text-down ease-out 0.5s 1s both;
 }
 
 #project-container {
-  animation: move-up ease 1.3s;
+  animation: move-up ease 1s;
 }
 
 @media (prefers-reduced-motion) {
