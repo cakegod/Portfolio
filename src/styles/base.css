@@ -94,7 +94,7 @@ body {
 @keyframes text-down {
   0% {
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateY(-15%);
   }
 
   100% {
@@ -125,13 +125,13 @@ main {
 }
 
 .tag {
-  animation: text-down ease 1s 0.8s both;
+  animation: text-down ease 0.8s 0.7s both;
 }
 
 .image {
-  animation: text-down ease 1s 1s both;
+  animation: text-down ease 0.8s 0.9s both;
 }
 
 .card-content {
-  animation: text-down ease 1s 1.4s both;
+  animation: text-down ease 0.8s 1.2s both;
 }
