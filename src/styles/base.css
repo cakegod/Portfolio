@@ -94,7 +94,7 @@ body {
 @keyframes text-down {
   0% {
     opacity: 0;
-    transform: translateY(-150%);
+    transform: translateY(-50%);
   }
 
   100% {
@@ -122,4 +122,16 @@ main {
   #project-container > h1 {
     animation: none;
   }
+}
+
+.tag {
+  animation: text-down ease-out 0.7s 1.5s both;
+}
+
+.image {
+  animation: text-down ease-out 1s 1.8s both;
+}
+
+.card-content {
+  animation: text-down ease-out 0.7s 2.5s both;
 }
