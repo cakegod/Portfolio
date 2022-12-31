@@ -94,7 +94,7 @@ body {
 @keyframes text-down {
   0% {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
   }
 
   100% {
@@ -108,11 +108,11 @@ main {
 }
 
 #project-container > h1 {
-  animation: text-down ease-out 0.5s 1s both;
+  animation: text-down ease-out 0.7s 0.7s both;
 }
 
 #project-container {
-  animation: move-up ease 1s;
+  animation: text-down ease 0.7s;
 }
 
 @media (prefers-reduced-motion) {
@@ -125,13 +125,13 @@ main {
 }
 
 .tag {
-  animation: text-down ease-out 0.7s 1.2s both;
+  animation: text-down ease 1s 0.8s both;
 }
 
 .image {
-  animation: text-down ease-out 0.7s 1.5s both;
+  animation: text-down ease 1s 1s both;
 }
 
 .card-content {
-  animation: text-down ease-out 0.7s 2s both;
+  animation: text-down ease 1s 1.4s both;
 }
