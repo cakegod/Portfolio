@@ -125,13 +125,13 @@ main {
 }
 
 .tag {
-  animation: text-down ease-out 0.7s 1.5s both;
+  animation: text-down ease-out 0.7s 1.2s both;
 }
 
 .image {
-  animation: text-down ease-out 1s 1.8s both;
+  animation: text-down ease-out 0.7s 1.5s both;
 }
 
 .card-content {
-  animation: text-down ease-out 0.7s 2.5s both;
+  animation: text-down ease-out 0.7s 2s both;
 }
