@@ -81,20 +81,10 @@ body {
   }
 }
 
-@keyframes move-up {
-  0% {
-    transform: translateY(150%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes text-down {
+@keyframes move-down {
   0% {
     opacity: 0;
-    transform: translateY(-15%);
+    transform: translateY(-10%);
   }
 
   100% {
@@ -107,31 +97,14 @@ main {
   animation: fade-in ease-out 0.7s;
 }
 
-#project-container > h1 {
-  animation: text-down ease-out 0.7s 0.7s both;
-}
-
-#project-container {
-  animation: text-down ease 0.7s;
-}
-
-@media (prefers-reduced-motion) {
-  #project-container {
-    animation: fade-in ease-out 0.7s;
-  }
-  #project-container > h1 {
-    animation: none;
-  }
-}
-
-.tag {
-  animation: text-down ease 0.8s 0.7s both;
-}
-
-.image {
-  animation: text-down ease 0.8s 0.9s both;
+.card-image {
+  animation: move-down ease 1s both;
 }
 
 .card-content {
-  animation: text-down ease 0.8s 1.2s both;
+  animation: move-down ease 1s 0.2s both;
+}
+
+.card-tag {
+  animation: move-down ease 1s 0.4s both;
 }
