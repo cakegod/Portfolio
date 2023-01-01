@@ -2,6 +2,8 @@
 import "@fontsource/inter/variable-full.css";
 import Navbar from "@components/navbar/Navbar.astro";
 import "@styles/base.css";
+import i18next from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 export interface Props {
   title?: string;
@@ -11,15 +13,16 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html class="h-full" lang="en">
+<html class="h-full" lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title ? `Fábio | ${title}` : "Fábio"}</title>
+    <HeadHrefLangs />
   </head>
-  <body class="h-full bg-black px-6 text-neutral-100 md:px-12">
+  <body class="h-full bg-black px-6 text-neutral-100 md:px-12 animation">
     <span class="body-glow" aria-hidden></span>
     <Navbar />
     <slot />

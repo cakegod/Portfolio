@@ -1,10 +1,15 @@
+---
+import { t } from "i18next";
+import { localizePath } from "astro-i18next";
+---
+
 <div
   class="item-center group relative m-auto my-10 flex h-14 w-40 justify-center rounded-md bg-gradient-to-l from-indigo-500 to-blue-500 p-[1px] text-neutral-200"
 >
   <button
     class="z-10 h-full w-full rounded-md bg-black duration-200 hover:bg-inherit"
   >
-    <a href="/projects">Let me see!</a>
+    <a href={localizePath("/projects")}>{t("home.button")}</a>
   </button>
   <div
     class="absolute h-full w-full rounded-md bg-gradient-to-r from-indigo-600 to-blue-600 transition-all duration-500 group-hover:opacity-50 group-hover:blur-xl"

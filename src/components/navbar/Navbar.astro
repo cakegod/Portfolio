@@ -24,16 +24,16 @@ import Logo from "@components/navbar/Logo.astro";
 
   function linkToggle() {
     switch (window.location.pathname) {
-      case "/":
+      case home.getAttribute("href"):
         home.classList.add("nav-link");
         break;
-      case "/projects":
+      case projects.getAttribute("href"):
         projects.classList.add("nav-link");
         break;
-      case "/about":
+      case about.getAttribute("href"):
         about.classList.add("nav-link");
         break;
-      case "/contact":
+      case contact.getAttribute("href"):
         contact.classList.add("nav-link");
         break;
     }

@@ -1,11 +1,12 @@
 ---
 import Link from "@components/navbar/Link.astro";
-
+import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
 const links = [
-  { name: "01. Home", id: "home", path: "/" },
-  { name: "02. Projects", id: "projects", path: "/projects" },
-  { name: "03. About", id: "about", path: "/about" },
-  { name: "04. Contact", id: "contact", path: "/contact" },
+  { name: t("navbar.home"), id: "home", path: "/" },
+  { name: t("navbar.projects"), id: "projects", path: "/projects" },
+  { name: t("navbar.about"), id: "about", path: "/about" },
+  { name: t("navbar.contact"), id: "contact", path: "/contact" },
 ];
 ---
 
@@ -13,5 +14,6 @@ const links = [
   class="fixed right-0 top-0 z-40 flex h-full w-full scale-0 flex-col items-center justify-center gap-10 backdrop-blur-xl backdrop-brightness-[0.25] md:static md:right-auto md:top-auto md:scale-100 md:flex-row md:items-start md:pt-0 md:text-lg md:backdrop-blur-none md:backdrop-brightness-100"
   id="menu"
 >
+  <LanguageSelector class="bg-black text-base" showFlag={true} />
   {links.map((link) => <Link link={link} />)}
 </div>

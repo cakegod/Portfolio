@@ -1,4 +1,6 @@
 ---
+import { localizePath } from "astro-i18next";
+
 interface Props {
   link: {
     name: string;
@@ -12,7 +14,7 @@ const { name, id, path } = link;
 ---
 
 <a
-  href={path}
+  href={localizePath(path)}
   id={id}
   class="text-neutral-400 transition-colors hover:text-neutral-200"
 >

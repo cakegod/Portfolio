@@ -1,0 +1,41 @@
+{
+  "navbar": {
+    "home": "01. Accueil",
+    "projects": "02. Projets",
+    "about": "03. À propos",
+    "contact": "04. Contact"
+  },
+  "home": {
+    "description": "Développeur auto-didacte",
+    "welcome": "Bienvenue sur mon site personnel !",
+    "welcome-description": "Sur ce site, vous trouverez une sélection de mes projets de développement web les plus remarquables, des informations sur moi-même et des détails sur la manière de me contacter.",
+    "button": "Laisse moi voir!"
+  },
+  "projects": {
+    "heading": "Mes projects",
+    "blog": {
+      "title": "Blog API",
+      "details": "Une application fullstack sur un blog, réalisée avec Next JS pour le front-end et Express JS pour le back-end.",
+      "list": [
+        "Création d'une <strong>API REST</strong> en tant que back-end avec Express JS.",
+        "Mise en œuvre de <strong>MongoDB</strong> en tant que base de données."
+      ]
+    },
+    "shopping": {
+      "title": "Shopping Cart",
+      "details": "Une application front-end sur un e-commerce, réalisée avec React et Next JS.",
+      "list": [
+        "Utilisation de <strong>Next.js</strong> pour le routage et l'optimisation des images et des polices.",
+        "Mise en œuvre de <strong>contexte React</strong> pour éviter le forage de prop."
+      ]
+    },
+    "memory": {
+      "title": "Jeu de Mémoire",
+      "details": "Une application front-end sur un jeu de mémoire, réalisée avec React.",
+      "list": [
+        "Appris a utiliser des <strong>hooks React</strong> et des méthodes de <strong>cycle de vie</strong>.",
+        "Mise en œuvre de <strong>Zustand</strong> pour la gestion de state."
+      ]
+    }
+  }
+}
