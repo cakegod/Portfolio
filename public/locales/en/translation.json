@@ -12,6 +12,7 @@
     "button": "Let me see!"
   },
   "projects": {
+    "title": "Projects",
     "heading": "My projects",
     "blog": {
       "title": "Blog API",
@@ -37,5 +38,11 @@
         "Implemented <strong>Zustand</strong> for state management."
       ]
     }
+  },
+  "about": {
+    "title": "About"
+  },
+  "contact": {
+    "title": "Contact"
   }
 }

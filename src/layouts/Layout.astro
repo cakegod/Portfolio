@@ -2,7 +2,7 @@
 import "@fontsource/inter/variable-full.css";
 import Navbar from "@components/navbar/Navbar.astro";
 import "@styles/base.css";
-import i18next from "i18next";
+import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 
 export interface Props {
@@ -19,7 +19,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title ? `Fábio | ${title}` : "Fábio"}</title>
+    <title>{title ? `Fábio | ${t(title)}` : "Fábio"}</title>
     <HeadHrefLangs />
   </head>
   <body class="flex flex-col h-full bg-black px-6 text-neutral-100 sm:block md:px-12">

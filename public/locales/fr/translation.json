@@ -12,6 +12,7 @@
     "button": "Laisse moi voir!"
   },
   "projects": {
+    "title": "Projets",
     "heading": "Mes projects",
     "blog": {
       "title": "Blog API",
@@ -37,5 +38,11 @@
         "Mise en œuvre de <strong>Zustand</strong> pour la gestion de state."
       ]
     }
+  },
+  "about": {
+    "title": "À propos"
+  },
+  "contact": {
+    "title": "Contact"
   }
 }
