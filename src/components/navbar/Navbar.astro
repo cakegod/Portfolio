@@ -2,13 +2,15 @@
 import Hamburger from "@components/navbar/Hamburger.astro";
 import Links from "@components/navbar/Links.astro";
 import Logo from "@components/navbar/Logo.astro";
+import { LanguageSelector } from "astro-i18next/components";
 ---
 
 <nav
   class="mb-12 flex h-20 shrink-0 items-center justify-between text-2xl font-semibold md:h-28"
 >
   <Logo />
-  <div class="flex flex-col items-end">
+  <div class="flex items-end">
+    <LanguageSelector class="bg-black text-base mr-8" showFlag={true} />
     <Hamburger />
     <Links />
   </div>
