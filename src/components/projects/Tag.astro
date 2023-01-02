@@ -32,7 +32,7 @@ interface Props {
 const { tagName } = Astro.props;
 ---
 
-<div class={composeClass(tagName)}>
+<div class:list={composeClass(tagName)}>
   {tagName}
 </div>
 
