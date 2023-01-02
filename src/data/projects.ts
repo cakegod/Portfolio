@@ -1,6 +1,6 @@
-import shopping from "/shopping.webp";
-import memory from "/memory.webp";
-import blog from "/blog.webp";
+import shopping from "../assets/shopping.webp";
+import memory from "../assets/memory.webp";
+import blog from "../assets/blog.webp";
 import type { ProjectProps } from "@customTypes/projects";
 import { t } from "i18next";
 
@@ -18,9 +18,7 @@ export const projectsData: ProjectProps[] = [
     details: "projects.shopping.details",
     image: shopping,
     link: "https://shopping-cart-cakegod.vercel.app/shop",
-    list: [
-			"projects.shopping.list.0", "projects.shopping.list.1"
-    ],
+    list: ["projects.shopping.list.0", "projects.shopping.list.1"],
     tags: ["Tailwind", "React", "Next JS"],
   },
   {
@@ -28,9 +26,7 @@ export const projectsData: ProjectProps[] = [
     details: "projects.memory.details",
     image: memory,
     link: "https://memory-card-umber.vercel.app/",
-    list: [
-      "projects.memory.list.0", "projects.memory.list.1"
-    ],
+    list: ["projects.memory.list.0", "projects.memory.list.1"],
     tags: ["Tailwind", "React", "Zustand"],
   },
 ];
