@@ -22,8 +22,10 @@ const { title } = Astro.props;
     <title>{title ? `Fábio | ${t(title)}` : "Fábio"}</title>
     <HeadHrefLangs />
   </head>
-  <body class="flex flex-col h-full bg-black px-6 text-neutral-100 sm:block md:px-12">
-    <span class="body-glow" aria-hidden></span>
+  <body
+    class="flex h-full flex-col bg-black px-6 text-neutral-100 sm:block md:px-12"
+  >
+    <span class="body-glow" aria-hidden="true"></span>
     <Navbar />
     <slot />
   </body>
