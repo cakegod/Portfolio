@@ -1,6 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
+import { contactMethods } from "@data/contact";
+import Card from "@components/contact/Card.astro";
 
 changeLanguage("en");
 ---
@@ -12,23 +14,8 @@ changeLanguage("en");
     >
       Contact
     </h1>
-    <div class="grid sm:grid-cols-2">
-      <div
-        class="flex max-w-xs flex-col items-center gap-6 rounded border border-neutral-800 bg-black p-10 pb-8"
-      >
-        <h2 class="text-2xl sm:text-3xl font-black">E-mail</h2>
-        <p class="text-base text-neutral-400">
-          {t("contact.email-description")}
-        </p>
-        <button
-          class="h-12 w-full rounded bg-blue-700 font-medium text-blue-200 transition-all"
-        >
-          <a
-            class="flex h-full w-full items-center justify-center"
-            href="mailto:sousa892@hotmail.com">{t("contact.email-button")}</a
-          >
-        </button>
-      </div>
+    <div class="flex flex-col sm:flex-row gap-4">
+      {contactMethods.map((method) => <Card method={method} />)}
     </div>
   </main>
 </Layout>

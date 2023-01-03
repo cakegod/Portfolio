@@ -44,7 +44,17 @@
   },
   "contact": {
     "title": "Contact",
-    "email-description": "Contact me through e-mail.",
-    "email-button": "Send e-mail"
+    "email": {
+      "heading": "E-mail",
+      "description": "Contact me through e-mail.",
+      "button": "Send e-mail",
+      "link": "mailto:sousa892@hotmail.com"
+    },
+    "github": {
+      "heading": "Github",
+      "description": "Check my other projects in Github.",
+      "button": "Check Github",
+      "link": "https://github.com/cakegod"
+    }
   }
 }
