@@ -1,6 +1,5 @@
 ---
-import type { TagNameProps } from "@customTypes/projects";
-import { projectTags } from "@data/projectTags";
+import { composeClass } from "src/util/composeClasses";
 
 const classBase =
   "flex w-[4.25rem] sm:w-20 items-center justify-center rounded py-2 sm:text-sm text-xs font-medium card-tag";
@@ -15,24 +14,25 @@ const classColors = {
   rose: "bg-rose-900 text-rose-100",
 };
 
-export type TagColorsProps = keyof typeof classColors;
+type Tags = "Tailwind";
 
-const findTupleColorName = (tagName: TagNameProps) =>
-  projectTags.find((tag) => tag[0] === tagName)![1];
-
-const composeClass = (tagName: TagNameProps) => {
-  const colorName = findTupleColorName(tagName);
-  return `${classBase} ${classColors[colorName]}`;
+export const projectTags = {
+  Tailwind: "cyan",
+  Zustand: "red",
+  React: "sky",
+  "Next JS": "orange",
+  MongoDB: "green",
+  Express: "indigo",
 };
 
 interface Props {
-  tagName: TagNameProps;
+  tagName: keyof typeof projectTags;
 }
 
 const { tagName } = Astro.props;
 ---
 
-<div class:list={composeClass(tagName)}>
+<div class:list={composeClass(tagName, classBase, classColors, projectTags)}>
   {tagName}
 </div>
 

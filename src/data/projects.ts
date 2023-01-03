@@ -1,8 +1,16 @@
 import shopping from "../assets/shopping.webp";
 import memory from "../assets/memory.webp";
 import blog from "../assets/blog.webp";
-import type { ProjectProps } from "@customTypes/projects";
-import { t } from "i18next";
+import type { projectTags } from "../components/projects/Tag.astro";
+
+export interface ProjectProps {
+  title: string;
+  details: string;
+  image: string;
+  link: string;
+  list: string[];
+  tags: (keyof typeof projectTags)[];
+}
 
 export const projectsData: ProjectProps[] = [
   {
