@@ -13,7 +13,7 @@
   },
   "projects": {
     "title": "Projets",
-    "heading": "Mes projects",
+    "heading": "Mes projets",
     "blog": {
       "title": "Blog API",
       "details": "Une application fullstack sur un blog, réalisée avec Next JS pour le front-end et Express JS pour le back-end.",
