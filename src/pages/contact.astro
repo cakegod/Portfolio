@@ -1,8 +1,31 @@
 ---
-import { changeLanguage } from "i18next";
 import Layout from "@layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 ---
 
-<Layout title="contact.title" />
+<Layout title="contact.title">
+  <main class="mx-auto max-w-5xl pb-4">
+    <h1
+      class="pb-6 text-center text-3xl font-black uppercase sm:text-5xl md:pb-8"
+    >
+      Contact
+    </h1>
+    <div class="grid sm:grid-cols-2">
+      <div
+        class="flex max-w-xs flex-col items-center gap-6 rounded border border-neutral-800 bg-black p-10 pb-8"
+      >
+        <h2 class="text-3xl font-black">E-mail</h2>
+        <p class="text-base text-neutral-400">
+          {t("contact.email-description")}
+        </p>
+        <button
+          class="h-12 w-full rounded bg-blue-700 font-medium text-blue-200 transition-all"
+        >
+          <a href="mailto:sousa892@hotmail.com">{t("contact.email-button")}</a>
+        </button>
+      </div>
+    </div>
+  </main>
+</Layout>

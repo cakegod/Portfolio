@@ -1,8 +1,30 @@
 ---
 import { changeLanguage } from "i18next";
 import Layout from "@layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("fr");
 ---
 
-<Layout title="contact.title" />
+<Layout title="contact.title">
+  <main class="mx-auto grid max-w-5xl pb-4 sm:grid-cols-2 md:grid-cols-3">
+    <!-- <div class="flex items-center gap-4 font-medium">
+      <h2 class="font-black uppercase">E-mail:</h2>
+      <a
+        href="mailto:sousa892@hotmail.com"
+        class="text-blue-400 decoration-2 underline-offset-2 hover:underline"
+        >sousa892@hotmail.com</a
+      >
+    </div> -->
+    <div
+      class="flex flex-col items-center gap-4 rounded border border-neutral-800 bg-black p-8"
+    >
+      <h2 class="text-3xl font-black">E-mail</h2>
+      <p class="text-base text-neutral-400">{t("contact.email-description")}</p>
+      <button
+        class="rounded border-blue-900 bg-blue-700 p-2 font-medium text-blue-200"
+        ><a href="mailto:sousa892@hotmail.com">{t("contact.email-button")}</a>
+      </button>
+    </div>
+  </main>
+</Layout>

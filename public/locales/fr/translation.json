@@ -43,6 +43,8 @@
     "title": "À propos"
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contact",
+    "email-description": "Contactez-moi par e-mail.",
+    "email-button": "Envoyer un e-mail"
   }
 }
