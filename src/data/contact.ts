@@ -18,6 +18,6 @@ export const contactMethods: ContactProps[] = [
     heading: "Github",
     description: "contact.github.description",
     button: "contact.github.button",
-    link: "contact.github.link",
+    link: "https://github.com/cakegod",
   },
 ];
