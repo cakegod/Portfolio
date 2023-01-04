@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { t, changeLanguage } from "i18next";
+import { changeLanguage } from "i18next";
 import { contactMethods } from "@data/contact";
 import Card from "@components/contact/Card.astro";
 
@@ -14,7 +14,7 @@ changeLanguage("fr");
     >
       Contact
     </h1>
-    <div class="flex flex-col gap-4 sm:flex-row">
+    <div class="flex flex-col gap-8 sm:flex-row">
       {contactMethods.map((method) => <Card method={method} />)}
     </div>
   </main>
