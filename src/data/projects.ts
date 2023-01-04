@@ -1,7 +1,7 @@
-import shopping from "../assets/shopping.webp";
-import memory from "../assets/memory.webp";
-import blog from "../assets/blog.webp";
-import type { projectTags } from "../components/projects/Tag.astro";
+import shopping from "@assets/shopping.webp";
+import memory from "@assets/memory.webp";
+import blog from "@assets/blog.webp";
+import type { TagsNameProps } from "@components/projects/Tag.astro";
 
 export interface ProjectProps {
   title: string;
@@ -9,7 +9,7 @@ export interface ProjectProps {
   image: string;
   link: string;
   list: string[];
-  tags: (keyof typeof projectTags)[];
+  tags: TagsNameProps[];
 }
 
 export const projectsData: ProjectProps[] = [

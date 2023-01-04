@@ -1,6 +1,6 @@
 ---
 import type { ProjectProps } from "@data/projects";
-import { composeClass } from "src/util/composeClasses";
+import { composeClass } from "@util/composeClasses";
 
 const classBase =
   "flex w-[4.25rem] sm:w-20 items-center justify-center rounded py-2 sm:text-sm text-xs font-medium card-tag";
@@ -15,7 +15,7 @@ const classColors = {
   rose: "bg-rose-900 text-rose-100",
 };
 
-type TagsProps =
+export type TagsNameProps =
   | "Tailwind"
   | "Zustand"
   | "React"
@@ -23,7 +23,7 @@ type TagsProps =
   | "MongoDB"
   | "Express";
 
-export const projectTags: Record<TagsProps, keyof typeof classColors> = {
+export const projectTags: Record<TagsNameProps, keyof typeof classColors> = {
   Tailwind: "cyan",
   Zustand: "red",
   React: "sky",

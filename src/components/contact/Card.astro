@@ -1,6 +1,6 @@
 ---
 import { t } from "i18next";
-import { composeClass } from "src/util/composeClasses";
+import { composeClass } from "@util/composeClasses";
 
 const classBase = "h-12 w-full rounded font-medium transition-all";
 
@@ -9,16 +9,16 @@ const classColors = {
   amber: "bg-amber-700 text-amber-200",
 };
 
-type ContactProps = "E-mail" | "Github";
+export type ContactNameProps = "E-mail" | "Github";
 
-const contacts: Record<ContactProps, keyof typeof classColors> = {
+const contacts: Record<ContactNameProps, keyof typeof classColors> = {
   "E-mail": "blue",
   Github: "amber",
 };
 
 interface Props {
   method: {
-    heading: ContactProps;
+    heading: ContactNameProps;
     description: string;
     button: string;
     link: string;
@@ -30,7 +30,7 @@ const { heading, description, button, link } = method;
 ---
 
 <div
-  class="flex max-w-xs flex-col items-center justify-between gap-6 rounded border border-neutral-800 bg-black p-10 pb-8 text-center grow basis-1"
+  class="flex max-w-xs grow basis-1 flex-col items-center justify-between gap-6 rounded border border-neutral-800 bg-black p-10 pb-8 text-center"
 >
   <h2 class="text-2xl font-black sm:text-3xl">{t(heading)}</h2>
   <p class="text-base text-neutral-400">
