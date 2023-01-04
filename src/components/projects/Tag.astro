@@ -1,4 +1,5 @@
 ---
+import type { ProjectProps } from "@data/projects";
 import { composeClass } from "src/util/composeClasses";
 
 const classBase =
@@ -14,9 +15,15 @@ const classColors = {
   rose: "bg-rose-900 text-rose-100",
 };
 
-type Tags = "Tailwind";
+type TagsProps =
+  | "Tailwind"
+  | "Zustand"
+  | "React"
+  | "Next JS"
+  | "MongoDB"
+  | "Express";
 
-export const projectTags = {
+export const projectTags: Record<TagsProps, keyof typeof classColors> = {
   Tailwind: "cyan",
   Zustand: "red",
   React: "sky",
@@ -32,7 +39,7 @@ interface Props {
 const { tagName } = Astro.props;
 ---
 
-<div class:list={composeClass(tagName, classBase, classColors, projectTags)}>
+<div class:list={composeClass(classBase, classColors[projectTags[tagName]])}>
   {tagName}
 </div>
 

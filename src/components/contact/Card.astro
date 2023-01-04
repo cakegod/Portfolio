@@ -9,10 +9,21 @@ const classColors = {
   amber: "bg-amber-700 text-amber-200",
 };
 
-const contacts = {
-  email: "blue",
-	github: "amber"
+type ContactProps = "E-mail" | "Github";
+
+const contacts: Record<ContactProps, keyof typeof classColors> = {
+  "E-mail": "blue",
+  Github: "amber",
 };
+
+interface Props {
+  method: {
+    heading: ContactProps;
+    description: string;
+    button: string;
+    link: string;
+  };
+}
 
 const { method } = Astro.props;
 const { heading, description, button, link } = method;
@@ -25,9 +36,7 @@ const { heading, description, button, link } = method;
   <p class="text-base text-neutral-400">
     {t(description)}
   </p>
-  <button
-    class:list={composeClass(t(button), classBase, classColors, contacts)}
-  >
+  <button class:list={composeClass(classBase, classColors[contacts[heading]])}>
     <a class="flex h-full w-full items-center justify-center" href={link}
       >{t(button)}</a
     >
