@@ -1,5 +1,4 @@
 ---
-import type { ProjectProps } from "@data/projects";
 import { composeClass } from "@util/composeClasses";
 
 const classBase =
@@ -15,13 +14,7 @@ const classColors = {
   rose: "bg-rose-900 text-rose-100",
 };
 
-export type TagsNameProps =
-  | "Tailwind"
-  | "Zustand"
-  | "React"
-  | "Next JS"
-  | "MongoDB"
-  | "Express";
+type TagsNameProps = "Tailwind" | "Zustand" | "React" | "Next JS" | "MongoDB" | "Express";
 
 export const projectTags: Record<TagsNameProps, keyof typeof classColors> = {
   Tailwind: "cyan",
