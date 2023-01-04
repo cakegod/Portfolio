@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate": "astro-i18next generate"
   },
   "dependencies": {
     "@astrojs/image": "^0.12.1",
