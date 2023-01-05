@@ -17,8 +17,7 @@ import { LanguageSelector } from "astro-i18next/components";
 </nav>
 
 <script>
-  const hamburger = document.getElementById("hamburger") as HTMLDivElement;
-  const menu = document.getElementById("menu") as HTMLDivElement;
+
   const home = document.getElementById("home") as HTMLLinkElement;
   const projects = document.getElementById("projects") as HTMLLinkElement;
   const about = document.getElementById("about") as HTMLLinkElement;
@@ -43,9 +42,5 @@ import { LanguageSelector } from "astro-i18next/components";
 
   linkToggle();
 
-  hamburger.addEventListener("click", () => {
-    !menu.classList.contains("animate-open")
-      ? menu.classList.toggle("animate-open")
-      : menu.classList.toggle("animate-open-reverse");
-  });
+  
 </script>
