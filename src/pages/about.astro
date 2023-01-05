@@ -7,19 +7,17 @@ changeLanguage("en");
 
 <Layout title="about.title">
   <main
-    class="mx-auto max-w-4xl pb-4 text-lg font-normal text-neutral-200 sm:text-xl"
+    class="mx-auto max-w-4xl pb-4 text-lg font-light text-neutral-200 sm:text-xl"
   >
     <h1
       class="pb-6 text-center text-3xl font-black uppercase sm:text-5xl md:pb-8"
     >
       About me
     </h1>
-    <p class="pb-3">
-      {
-        t("about.content")
-          .split(/\r?\n|\r|\n/g)
-          .map((a) => <p class="pb-2">{a}</p>)
-      }
-    </p>
+    {
+      t("about.content")
+        .split(/\r?\n|\r|\n/g)
+        .map((a) => <p class="pb-2">{a}</p>)
+    }
   </main>
 </Layout>
