@@ -10,29 +10,6 @@
   .button-glow {
     box-shadow: 0 5px 60px #4a8dfa3d, 0 0 5px #6365f19f;
   }
-
-  .body-glow {
-    background: conic-gradient(
-      from 180deg at 50% 50%,
-      #247fe7 0deg,
-      #367caa 180deg,
-      #3e24d4 1turn
-    );
-    mix-blend-mode: normal;
-    filter: blur(150px);
-    border-radius: 300px;
-    height: 80%;
-    width: 90%;
-    margin: auto;
-    display: block;
-    opacity: 0.12;
-    z-index: -100;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    position: absolute;
-  }
 }
 
 ::selection {
@@ -71,12 +48,10 @@ body {
 
 @keyframes fade-in {
   0% {
-    /* transform: translateY(150%); */
     opacity: 0.7;
   }
 
   100% {
-    /* transform: translateY(0); */
     opacity: 1;
   }
 }
@@ -95,16 +70,4 @@ body {
 
 main {
   animation: fade-in ease-out 0.7s;
-}
-
-.card-image {
-  animation: move-down ease 1s both;
-}
-
-.card-content {
-  animation: move-down ease 1s 0.2s both;
-}
-
-.card-tag {
-  animation: move-down ease 1s 0.4s both;
 }

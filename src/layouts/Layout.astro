@@ -29,8 +29,32 @@ const { title } = Astro.props;
   <body
     class="flex h-full flex-col bg-black px-6 text-neutral-100 sm:block md:px-12"
   >
-    <span class="body-glow" aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
     <Navbar />
     <slot />
+    <style>
+      span {
+        background: conic-gradient(
+          from 180deg at 50% 50%,
+          #247fe7 0deg,
+          #367caa 180deg,
+          #3e24d4 1turn
+        );
+        mix-blend-mode: normal;
+        filter: blur(150px);
+        border-radius: 300px;
+        height: 80%;
+        width: 90%;
+        margin: auto;
+        display: block;
+        opacity: 0.12;
+        z-index: -100;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        position: absolute;
+      }
+    </style>
   </body>
 </html>

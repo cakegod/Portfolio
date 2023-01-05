@@ -23,7 +23,7 @@ const { title, image, details, link, tags } = projectData;
       format="webp"
       src={image}
       alt={`my ${title} project`}
-      class="image card-image w-full rounded-sm pb-2 lg:h-72"
+      class="w-full rounded-sm pb-2 lg:h-72 card-image"
     />
     <div class="card-content pt-2">
       <h2 class="text-lg font-semibold text-neutral-200">{t(title)}</h2>
@@ -40,3 +40,15 @@ const { title, image, details, link, tags } = projectData;
   >
   </div>
 </a>
+
+<style>
+  .card-image {
+    animation: move-down ease 1s both;
+  }
+
+  .card-content {
+    animation: move-down ease 1s 0.2s both;
+  }
+
+
+</style>

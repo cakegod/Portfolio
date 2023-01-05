@@ -14,7 +14,13 @@ const classColors = {
   rose: "bg-rose-900 text-rose-100",
 };
 
-type TagsNameProps = "Tailwind" | "Zustand" | "React" | "Next JS" | "MongoDB" | "Express";
+type TagsNameProps =
+  | "Tailwind"
+  | "Zustand"
+  | "React"
+  | "Next JS"
+  | "MongoDB"
+  | "Express";
 
 export const projectTags: Record<TagsNameProps, keyof typeof classColors> = {
   Tailwind: "cyan",
@@ -36,4 +42,8 @@ const { tagName } = Astro.props;
   {tagName}
 </div>
 
-<script></script>
+<style>
+  .card-tag {
+    animation: move-down ease 1s 0.4s both;
+  }
+</style>
