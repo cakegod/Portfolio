@@ -15,3 +15,50 @@ const links = [
 >
   {links.map((link) => <Link link={link} />)}
 </div>
+<script>
+  const hamburger = document.getElementById("hamburger") as HTMLDivElement;
+  const menu = document.getElementById("menu") as HTMLDivElement;
+  hamburger.addEventListener("click", () => {
+    !menu.classList.contains("open")
+      ? menu.classList.toggle("open")
+      : menu.classList.toggle("close");
+  });
+</script>
+
+<style>
+  .open {
+    animation: expand 0.4s ease forwards;
+  }
+
+  .close {
+    animation: collapse 0.4s ease forwards;
+  }
+
+  @keyframes expand {
+    0% {
+      transform: scaleX(0);
+    }
+
+    50% {
+      transform: scaleX(1.2);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes collapse {
+    0% {
+      transform: scaleX(1);
+    }
+
+    50% {
+      transform: scaleX(1.2);
+    }
+
+    100% {
+      transform: scaleX(0);
+    }
+  }
+</style>
