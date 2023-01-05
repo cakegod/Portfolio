@@ -40,7 +40,9 @@
     }
   },
   "about": {
-    "title": "About"
+    "title": "About",
+		"content": "Hi there! My name is F\u00E1bio Rodrigues. I am a 25-year-old self-taught developer with a passion for continuously learning and expanding my skillset. I have been learning web development since May 2022 and have been using the curriculum \"The Odin Project\" as a guide for my studies.\r\n\r\nI have a strong interest in technology and how it can be utilized to solve problems and improve people's lives. During the COVID-19 pandemic, I decided to take the opportunity to pursue my passion for web development and have since gained proficiency in HTML, CSS, and JavaScript.\r\n\r\nIn addition to my studies, I enjoy staying active through activities such as hiking and spending time with my friends and family. In my free time, I am an avid reader and enjoy playing video games.\r\n\r\nI am always seeking new opportunities to apply my skills and grow as a developer. Thank you for considering me for potential opportunities and challenges."
+		
   },
   "contact": {
     "title": "Contact",

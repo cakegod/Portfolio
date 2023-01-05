@@ -40,7 +40,8 @@
     }
   },
   "about": {
-    "title": "À propos"
+    "title": "À propos",
+    "content": "Salut ! Je m'appelle F\u00E1bio Rodrigues. Je suis un d\u00E9veloppeur autodidacte de 25 ans avec une passion pour l'apprentissage continu et l'\u00E9largissement de mes comp\u00E9tences. J'apprends le d\u00E9veloppement web depuis mai 2022 et j'utilise le programme \"The Odin Project\" comme guide pour mes \u00E9tudes.\r\n\r\nJe suis tr\u00E8s int\u00E9ress\u00E9 par la technologie et la fa\u00E7on dont elle peut \u00EAtre utilis\u00E9e pour r\u00E9soudre des probl\u00E8mes et am\u00E9liorer la vie des gens. Pendant la pand\u00E9mie de COVID-19, j'ai d\u00E9cid\u00E9 de saisir l'occasion de poursuivre ma passion pour le d\u00E9veloppement web et j'ai depuis acquis des comp\u00E9tences en HTML, CSS et JavaScript.\r\n\r\nEn plus de mes \u00E9tudes, j'aime rester actif gr\u00E2ce \u00E0 des activit\u00E9s telles que la randonn\u00E9e et passer du temps avec mes amis et ma famille. Pendant mon temps libre, je suis un lecteur passionn\u00E9 et j'aime jouer aux jeux vid\u00E9o.\r\n\r\nJe suis toujours \u00E0 la recherche de nouvelles opportunit\u00E9s pour appliquer mes comp\u00E9tences et \u00E9voluer en tant que d\u00E9veloppeur. Je vous remercie de me consid\u00E9rer pour des opportunit\u00E9s et des d\u00E9fis potentiels."
   },
   "contact": {
     "title": "Contact",
