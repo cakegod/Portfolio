@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { changeLanguage } from "i18next";
+import { changeLanguage, t } from "i18next";
 import { contactMethods } from "@data/contact";
 import Card from "@components/contact/Card.astro";
 
@@ -12,7 +12,7 @@ changeLanguage("fr");
     <h1
       class="pb-6 text-center text-3xl font-black uppercase sm:text-5xl md:pb-8"
     >
-      Contact
+      {t("contact.title")}
     </h1>
     <div class="flex flex-col gap-8 sm:flex-row">
       {contactMethods.map((method) => <Card method={method} />)}
