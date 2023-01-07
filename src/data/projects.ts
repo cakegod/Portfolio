@@ -1,6 +1,7 @@
 import shopping from "@assets/shopping.webp";
 import memory from "@assets/memory.webp";
 import blog from "@assets/blog.webp";
+import portfolio from "@assets/portfolio.jpg";
 import type { TagNames } from "@components/projects/Tag.astro";
 
 export interface Project {
@@ -28,6 +29,14 @@ export const projectsData: Project[] = [
     link: "https://shopping-cart-cakegod.vercel.app/shop",
     list: ["projects.shopping.list.0", "projects.shopping.list.1"],
     tags: ["Tailwind", "React", "Next JS"],
+  },
+  {
+    title: "projects.portfolio.title",
+    details: "projects.portfolio.details",
+    image: portfolio,
+    link: "https://portfolio-cakegod.vercel.app/",
+    list: ["projects.portfolio.list.0", "projects.portfolio.list.1"],
+    tags: ["Tailwind", "Astro"],
   },
   {
     title: "projects.memory.title",
