@@ -9,16 +9,17 @@ const classColors = {
   amber: "bg-amber-700 text-amber-200",
 };
 
-export type ContactNameProps = "E-mail" | "Github";
+type Colors = keyof typeof classColors
+export type ContactNames = "E-mail" | "Github";
 
-const contacts: Record<ContactNameProps, keyof typeof classColors> = {
+const contacts: Record<ContactNames, Colors> = {
   "E-mail": "blue",
   Github: "amber",
 };
 
 interface Props {
   method: {
-    heading: ContactNameProps;
+    heading: ContactNames;
     description: string;
     button: string;
     link: string;

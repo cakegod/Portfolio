@@ -1,13 +1,13 @@
-import type { ContactNameProps } from "@components/contact/Card.astro";
+import type { ContactNames } from "@components/contact/Card.astro";
 
-export interface ContactProps {
-  heading: ContactNameProps;
+export interface Contact {
+  heading: ContactNames;
   description: string;
   button: string;
   link: string;
 }
 
-export const contactMethods: ContactProps[] = [
+export const contactMethods: Contact[] = [
   {
     heading: "E-mail",
     description: "contact.email.description",
