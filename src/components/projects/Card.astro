@@ -2,10 +2,10 @@
 import Tag from "@components/projects/Tag.astro";
 import { t } from "i18next";
 import { Image } from "@astrojs/image/components";
-import type { ProjectProps } from "@data/projects";
+import type { Project } from "@data/projects";
 
 interface Props {
-  projectData: ProjectProps;
+  projectData: Project;
 }
 
 const { projectData } = Astro.props;

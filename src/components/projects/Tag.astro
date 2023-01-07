@@ -14,7 +14,8 @@ const classColors = {
   rose: "bg-rose-900 text-rose-100",
 };
 
-type TagsNameProps =
+type Colors = keyof typeof classColors
+export type TagNames =
   | "Tailwind"
   | "Zustand"
   | "React"
@@ -22,7 +23,7 @@ type TagsNameProps =
   | "MongoDB"
   | "Express";
 
-export const projectTags: Record<TagsNameProps, keyof typeof classColors> = {
+export const projectTags: Record<TagNames, Colors> = {
   Tailwind: "cyan",
   Zustand: "red",
   React: "sky",
@@ -32,7 +33,7 @@ export const projectTags: Record<TagsNameProps, keyof typeof classColors> = {
 };
 
 interface Props {
-  tagName: keyof typeof projectTags;
+  tagName: TagNames;
 }
 
 const { tagName } = Astro.props;

@@ -1,18 +1,18 @@
 import shopping from "@assets/shopping.webp";
 import memory from "@assets/memory.webp";
 import blog from "@assets/blog.webp";
-import type { TagsNameProps } from "@components/projects/Tag.astro";
+import type { TagNames } from "@components/projects/Tag.astro";
 
-export interface ProjectProps {
+export interface Project {
   title: string;
   details: string;
   image: string;
   link: string;
   list: string[];
-  tags: TagsNameProps[];
+  tags: TagNames[];
 }
 
-export const projectsData: ProjectProps[] = [
+export const projectsData: Project[] = [
   {
     title: "projects.blog.title",
     details: "projects.blog.details",
