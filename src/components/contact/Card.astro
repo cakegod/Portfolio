@@ -9,13 +9,13 @@ const classColors = {
   amber: "bg-amber-700 text-amber-200",
 };
 
-type Colors = keyof typeof classColors
-export type ContactNames = "E-mail" | "Github";
+type Colors = keyof typeof classColors;
+export type ContactNames = keyof typeof contacts;
 
-const contacts: Record<ContactNames, Colors> = {
+const contacts = {
   "E-mail": "blue",
   Github: "amber",
-};
+} satisfies Record<string, Colors>;
 
 interface Props {
   method: {

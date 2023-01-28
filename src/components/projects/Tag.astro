@@ -14,25 +14,18 @@ const classColors = {
   rose: "bg-rose-900 text-rose-100",
 };
 
-type Colors = keyof typeof classColors
-export type TagNames =
-  | "Tailwind"
-  | "Zustand"
-  | "React"
-  | "Next JS"
-  | "MongoDB"
-  | "Express"
-	| "Astro";
+type Colors = keyof typeof classColors;
+export type TagNames = keyof typeof projectTags;
 
-export const projectTags: Record<TagNames, Colors> = {
+const projectTags = {
   Tailwind: "cyan",
   Zustand: "red",
   React: "sky",
   "Next JS": "rose",
   MongoDB: "green",
   Express: "indigo",
-	Astro: "orange"
-};
+  Astro: "orange",
+} satisfies Record<string, Colors>;
 
 interface Props {
   tagName: TagNames;
