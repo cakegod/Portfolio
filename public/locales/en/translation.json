@@ -56,14 +56,12 @@
     "email": {
       "heading": "E-mail",
       "description": "Contact me through e-mail.",
-      "button": "Send e-mail",
-      "link": "mailto:sousa892@hotmail.com"
+      "button": "Send e-mail"
     },
     "github": {
       "heading": "Github",
       "description": "Check my other projects in Github.",
-      "button": "Check Github",
-      "link": "https://github.com/cakegod"
+      "button": "Check Github"
     }
   }
 }

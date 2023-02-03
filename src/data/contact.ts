@@ -12,7 +12,7 @@ export const contactMethods: Contact[] = [
     heading: "E-mail",
     description: "contact.email.description",
     button: "contact.email.button",
-    link: "contact.email.link",
+    link: "mailto:fabiorodriguessousa97@gmail.com",
   },
   {
     heading: "Github",
