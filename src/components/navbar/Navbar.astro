@@ -10,38 +10,19 @@ import { LanguageSelector } from "astro-i18next/components";
 >
   <Logo />
   <div class="flex items-center">
-    <LanguageSelector class="bg-black text-base mr-8" showFlag={true} />
+    <LanguageSelector class="mr-8 bg-black text-base" showFlag={true} />
     <Hamburger />
     <Links />
   </div>
 </nav>
 
 <script>
+  const linkNames = ["home", "projects", "about", "contact"];
 
-  const home = document.getElementById("home") as HTMLLinkElement;
-  const projects = document.getElementById("projects") as HTMLLinkElement;
-  const about = document.getElementById("about") as HTMLLinkElement;
-  const contact = document.getElementById("contact") as HTMLLinkElement;
-
-  function linkToggle() {
-    switch (window.location.pathname) {
-      case home.getAttribute("href"):
-        home.classList.add("nav-link");
-        break;
-      case projects.getAttribute("href"):
-        projects.classList.add("nav-link");
-        break;
-      case about.getAttribute("href"):
-        about.classList.add("nav-link");
-        break;
-      case contact.getAttribute("href"):
-        contact.classList.add("nav-link");
-        break;
+  linkNames.forEach((link) => {
+    const linkElement = document.getElementById(link) as HTMLLinkElement;
+    if (linkElement.getAttribute("href") === window.location.pathname) {
+      linkElement.classList.add("nav-link");
     }
-  }
-
-  linkToggle();
- 
+  });
 </script>
-
-
