@@ -16,7 +16,7 @@ changeLanguage("en");
       {
         projects.map((project) => (
           <Card projectData={project}>
-            <ul class="ml-4 list-disc pt-1 pb-4 text-neutral-400">
+            <ul class="ml-4 list-disc pb-4 pt-1 text-neutral-400">
               {project.list?.map((item) => (
                 <li set:html={t(item)} />
               ))}
