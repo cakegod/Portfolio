@@ -7,7 +7,7 @@ import type { TagNames } from "@components/projects/Tag.astro";
 export interface Project {
   title: string;
   details: string;
-  image: string;
+  image: ImageMetadata;
   link: string;
   list: string[];
   tags: TagNames[];

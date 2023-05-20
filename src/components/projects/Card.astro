@@ -1,7 +1,7 @@
 ---
 import Tag from "@components/projects/Tag.astro";
 import { t } from "i18next";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import type { Project } from "@data/projects";
 
 interface Props {
@@ -21,10 +21,9 @@ const { title, image, details, link, tags } = projectData;
       width={1200}
       height={600}
       quality={50}
-      format="webp"
       src={image}
       alt={`my ${title} project`}
-      class="w-full rounded-sm pb-2 lg:h-72 card-image"
+      class="card-image w-full rounded-sm pb-2 lg:h-72"
     />
     <div class="card-content pt-2">
       <h2 class="text-lg font-semibold text-neutral-200">{t(title)}</h2>
