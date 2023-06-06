@@ -12,20 +12,20 @@
     "generate": "astro-i18next generate"
   },
   "dependencies": {
-    "@astrojs/image": "^0.16.9",
+    "@astrojs/image": "^0.17.0",
     "@astrojs/tailwind": "^3.1.3",
-    "@fontsource/inter": "^4.5.15",
-    "astro": "^2.5.1",
-    "astro-compress": "^1.1.44",
+    "@fontsource/inter": "^5.0.2",
+    "astro": "^2.6.1",
+    "astro-compress": "^1.1.47",
     "astro-i18next": "1.0.0-beta.21",
-    "i18next": "^22.5.0",
+    "i18next": "^22.5.1",
     "i18next-fs-backend": "^2.1.2",
     "sharp": "^0.32.1",
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
     "prettier": "^2.8.8",
-    "prettier-plugin-astro": "^0.9.0",
+    "prettier-plugin-astro": "^0.10.0",
     "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }
